@@ -16,7 +16,7 @@ class App extends Component {
   //call back function
   buttonClickHandler() {
     this.setState({ renderBall: true });
-    console.log(this.state.renderBall);
+    //console.log(this.state.renderBall);
   }
   renderChoice() {
     if (this.state.renderBall) {
@@ -28,12 +28,12 @@ class App extends Component {
   }
 
   handleResize = (event) => {
-    console.log(event.keyCode);
+    //console.log(event.keyCode);
     if (event.keyCode === 39) {
       console.log(event.keyCode);
       this.setState({ posi: this.state.posi + 5 });
       this.setState({ ballPosition: { left: this.state.posi + "px" } });
-      console.log(this.state);
+      //console.log(this.state);
     }
   };
 

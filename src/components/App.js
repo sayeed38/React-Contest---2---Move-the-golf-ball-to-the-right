@@ -27,19 +27,18 @@ class App extends Component {
       );
   }
 
-  handleResize = (event) => {
-    //console.log(event.keyCode);
-    if (event.keyCode === 39) {
-      console.log(event.keyCode);
-      this.setState({ posi: this.state.posi + 5 });
-      this.setState({ ballPosition: { left: this.state.posi + "px" } });
-      //console.log(this.state);
-    }
-  };
-
   //bind ArrowRight keydown event
   componentDidMount() {
-    document.addEventListener("keydown", (event) => this.handleResize(event));
+    document.addEventListener("keydown", (event) => {
+      if (event.keyCode === 39) {
+        console.log(event.keyCode);
+        // this.setState({ posi: this.state.posi + 5 });
+        this.setState({
+          ballPosition: {
+            left: +this.state.ballPosition.left.slice(0, -2) + 5 + "px"
+          }
+        });
+		);
   }
 
   render() {

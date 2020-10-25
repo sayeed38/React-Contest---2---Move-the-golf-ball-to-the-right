@@ -16,7 +16,6 @@ class App extends Component {
   //call back function
   buttonClickHandler() {
     this.setState({ renderBall: true });
-    //console.log(this.state.renderBall);
   }
   renderChoice() {
     if (this.state.renderBall) {
@@ -38,7 +37,8 @@ class App extends Component {
             left: +this.state.ballPosition.left.slice(0, -2) + 5 + "px"
           }
         });
-		);
+      }
+    });
   }
 
   render() {
